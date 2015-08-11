@@ -5,7 +5,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, /*ul*/, li,
+dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -67,13 +67,12 @@ body{
 }
 
 
-
 span img {
-  border-radius: 50%;
-  height: 130px;
-  margin: 0 0 0 0;
-
+  border-radius: 20%;
+  height: 150px;
 }
+
+img.desaturate {-webkit-filter: sepia(40%); sepia: grayscale(40%);}
 
 .footerL {
 	display: inline-block;
@@ -83,12 +82,14 @@ span img {
 
 .footerR{
 	display: inline-block;
+
 }
 
 .another {
-  color: rgb(75, 101, 116);
+  color: rgb(222, 222, 212);
   font-size: 14px;
-  background-color: rgb(111, 140, 156);
+  background: rgb(29, 36, 50); /* for IE */
+  background: rgba(29, 36, 50,0.75);
   padding-bottom: 44px;
   padding-top: 44px;
 }
@@ -98,6 +99,42 @@ span img {
 }
 
 
+#middle{
+	color: rgb(222, 222, 212);
+}
+
+/*  ========================================
+ BLUR
+  ========================================*/
+
+#bg {
+  background-position: center top;
+  padding: 70px 90px 120px 90px;
+}
+
+#content-container {
+  position: relative;
+}
+
+#content-bg {
+ position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+	-webkit-filter: blur(500px);
+}
+
+#content {
+  /* Put this on top of the blurred layer */
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  background: rgb(29, 36, 50); /* for IE */
+  background: rgba(29, 36, 50,0.75);
+}
+
 
 /*
   ========================================
@@ -105,8 +142,8 @@ span img {
   ========================================
 */
 
-.logo {
-  border-top: 5px solid #ff745e;
+.topL {
+  border-top: 5px solid rgb(249, 226, 155);
   float: left;
   font-size: 20px;
   font-weight: 100;
@@ -116,5 +153,42 @@ span img {
   text-transform: uppercase;
   padding: 44px 0 22px 0;
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 0 0 0;
+}
+
+
+.topR{
+	display: inline-block;
+	margin: 0 0 0 70px;
+}
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+  color: rgb(212, 207, 177);
+}
+h3 {
+  font-size: 21px;
+  color: rgb(212, 207, 177);
+}
+h4 {
+  font-size: 18px;
+  color: rgb(212, 207, 177);
+}
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(212, 207, 177);
+}
+
 
