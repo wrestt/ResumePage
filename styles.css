@@ -63,7 +63,8 @@ html {
 
 
 body{
-	margin: 0 20% 0 20%;
+	margin: 0 0 0 0;
+  background-color: rgb(29, 36, 50);
 }
 
 
@@ -89,7 +90,7 @@ img.desaturate {-webkit-filter: sepia(40%); sepia: grayscale(40%);}
   color: rgb(222, 222, 212);
   font-size: 14px;
   background: rgb(29, 36, 50); /* for IE */
-  background: rgba(29, 36, 50,0.75);
+  background: rgba(29, 36, 50);
   padding-bottom: 44px;
   padding-top: 44px;
 }
@@ -107,23 +108,36 @@ img.desaturate {-webkit-filter: sepia(40%); sepia: grayscale(40%);}
  BLUR
   ========================================*/
 
-#bg {
-  background-position: center top;
-  padding: 70px 90px 120px 90px;
+
+.bg, .content-bg {
+  background-image: url("mountain.jpg");
 }
 
-#content-container {
+
+
+.bg {
+  background-position: center top;
+  padding: 20px 15% 20px 15%;
+}
+
+.content-container {
   position: relative;
 }
 
-#content-bg {
+.content-bg {
  position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   z-index: 99;
-	-webkit-filter: blur(500px);
+
+  /* Pull the background 70px higher to the same place as #bg's */
+  background-position: center -20px;
+
+  -webkit-filter: blur(30px);
+  filter: blur(10px);
+
 }
 
 #content {
@@ -143,7 +157,7 @@ img.desaturate {-webkit-filter: sepia(40%); sepia: grayscale(40%);}
 */
 
 .topL {
-  border-top: 5px solid rgb(249, 226, 155);
+  border-top:  solid rgb(249, 226, 155);
   float: left;
   font-size: 20px;
   font-weight: 100;
