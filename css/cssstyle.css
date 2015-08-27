@@ -1,0 +1,283 @@
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ============================================================
+  Header
+============================================================ */
+
+.page-header{
+  width: 100%;
+  background: rgba(253, 253, 253, 1);
+  position: absolute;
+  z-index: 100;
+  border: none;
+  padding: 20px;
+  display: inline-block;
+  border-bottom: 2px solid rgba(180, 180, 180, 1);
+}
+
+.logo {
+  float: left;
+  font-size: 30px;
+  border-bottom: 3px solid rgba(226, 169, 94, 1);
+  font-family: 'Pacifico', cursive;
+  display: inline-block;
+}
+
+ul#navmenu, ul.sub-projects{
+  list-style-type: none;
+}
+
+ul#navmenu li {
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  width: 125px;
+  text-align: center;
+  position: relative;
+  float: right;
+}
+
+ul#navmenu a{
+  display: block;
+  width: 125px;
+  height: 25px;
+  line-height:25px;
+  background: none;
+}
+
+ul#navmenu .sub a{
+  margin-top: 20px;
+}
+
+ul#navmenu li:hover > p {
+  border-bottom: 2px solid rgba(226, 169, 94, 1);
+}
+
+ul#navmenu ul.sub{
+  background-color: rgba(253, 253, 253, 1);
+  padding: 0 0 25px 0;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  border: 2px solid rgba(180, 180, 180, 1);
+  border-top: none;
+}
+
+ul#navmenu li:hover .sub{
+  display: block;
+}
+
+/* ============================================================
+  Title
+============================================================ */
+
+#page-title{
+  position: fixed;
+  text-align: center;
+}
+
+#object{
+  display: block;
+  margin: 40vh auto;
+  visibility: hidden;
+}
+
+.center-title{
+  margin: 40vh auto;
+}
+
+
+
+/* ============================================================
+  Title Background
+============================================================ */
+
+.pulsePage {
+	-webkit-animation: pulsePage 5s linear forwards;
+	-moz-animation: pulsePage 1s linear infinite;
+	-ms-animation: pulsePage 1s linear infinite;
+	animation: pulsePage 5s linear forwards;
+}
+
+
+@-webkit-keyframes pulsePage {
+ 0% {
+   background: url('../img/valley-bw.jpg');
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+ 100% {
+   background: url('../img/valley.jpg');
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+}
+
+/* ============================================================
+  Title / Page Content
+============================================================ */
+
+.page-content{
+  color: rgba(40, 48, 50, 1);
+  background: rgba(253, 253, 253, 1);
+  padding: 0 5% 5% 5%;
+  text-align: left;
+  top: 100vh;
+  position: relative;
+  border-top: 2px solid rgba(180, 180, 180, 1);
+  font-family: 'Lato', sans-serif;
+}
+
+
+.container{
+	max-width: 100%;
+	width: 100%;
+	padding: 0px 5%
+	margin: auto;
+}
+
+
+
+	a.button{
+		padding: 6px 16px;
+		background-color: rgba(25, 38, 44, 1);
+		color: #FFFFFF;
+		text-decoration: none;
+		border-bottom: 4px solid rgba(229, 219, 214, 1);
+		margin: 0px 15px 15px 0px;
+		display: inline-block;
+		border-radius: 5px;
+		font-size: 25px;
+	}
+
+
+	a.button:hover{
+    text-decoration: none;
+		background-color: rgba(124, 135, 131, 1);
+	}
+
+
+
+/* ============================================================
+animations
+============================================================ */
+
+
+
+
+.example-container .stretchRight{
+	background-color: transparent !important;
+}
+
+.bounce, .pulse, .floating, .tossing, .pullUp, .pullDown, .stretchLeft, .stretchRight{
+	visibility: visible !important;
+}
+
+
+/* ============================================================
+ footer
+============================================================ */
+
+.page-footer{
+  width: 100vw;
+  top: 100vh;
+  position: relative;
+  z-index: 100;
+  text-align: left;
+  padding: 30px 20%;
+  background-color: rgba(180, 180, 180, 1);
+  border-top: 2px solid rgba(124, 135, 131, 1);
+}
+
+
+.page-footer-content{
+  list-style-type: none;
+  padding:0 0 50px 0;
+}
+
+.page-footer-content li p{
+  border-bottom: 3px solid rgba(226, 169, 94, 1);
+}
+
+
+.page-footer-content li{
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  float: left;
+  padding: 0 5px;
+}
+
+.page-footer-content img{
+  float: left;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+/* ============================================================
+ Links
+============================================================ */
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgba(226, 169, 94, 1);
+  text-decoration: underline;
+}
+
+/* ============================================================
+ Typeography
+============================================================ */
+
+h1{
+  color: rgba(253, 253, 253, .9);
+  border: 12px double rgba(253, 253, 253, .9);
+  padding: 30px;
+  font-size: 50px;
+  width: 500px;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+h2{
+   font-size: 40px;
+   width: 500px;
+}
+
+h3{
+  padding-top: 5%;
+   font-size: 30px;
+  }
+
+h4{
+   font-size: 20px;
+  }
